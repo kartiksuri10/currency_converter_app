@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CURRENCY CONVERTER"
+        android:textSize="30dp"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        />
+
+    <EditText
+        android:id="@+id/amount"
+        android:layout_width="184dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:layout_marginRight="150dp"
+        android:hint="Input amount"
+        android:shadowColor="@android:color/holo_purple"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/input"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="230dp"
+        android:layout_marginTop="150dp"
+        android:scrollbarSize="150dp" />
+    <TextView
+        android:textSize="20dp"
+        android:layout_marginTop="230dp"
+        android:layout_marginLeft="80dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Convert to"
+        />
+    <Spinner
+        android:id="@+id/output"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="210dp"
+        android:layout_marginTop="230dp"
+        android:scrollbarSize="150dp"
+        />
+
+    <TextView
+        android:id="@+id/result_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
+        android:layout_centerHorizontal="true"
+        android:hint="Result"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/date_text"
+        android:textSize="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="350dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="650dp"
+        android:layout_centerHorizontal="true"
+        android:hint="©All rights reserved to Kartik Suri"/>
+</RelativeLayout>
