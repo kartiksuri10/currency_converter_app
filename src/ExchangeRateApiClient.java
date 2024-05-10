@@ -16,7 +16,7 @@ public class ExchangeRateApiClient {
     public static void load(final LoadCallback callback) {
         executor.execute(() -> {
             try {
-                String apiKey = "b8e551ea2da62a08a983cb7b";
+                String apiKey = ""; //Write your own API Key
                 String endpoint = "https://v6.exchangerate-api.com/v6/" + apiKey + "/latest/USD";
                 URL url = new URI(endpoint).toURL();
                 HttpURLConnection connection = (HttpURLConnection) url.openConnection();
@@ -29,7 +29,6 @@ public class ExchangeRateApiClient {
                 while ((line = reader.readLine()) != null) {
                     if (line.contains("time_last_update_utc")) {
                         date = line.substring(25, line.length() - 7) + "UTC";
-                        // You might want to notify the callback with the date if needed
                     } else if (line.contains("conversion_rates")) {
                         while ((line = reader.readLine()) != null) {
                             if (line.length() < 3) break;
@@ -46,7 +45,6 @@ public class ExchangeRateApiClient {
                 callback.onLoaded(map,date);
             } catch (Exception e) {
                 e.printStackTrace();
-                // Handle errors more gracefully, e.g., notify the callback with null or an empty map
             }
         });
     }
